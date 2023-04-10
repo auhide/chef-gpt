@@ -65,8 +65,13 @@ def _generate_recipe(
         input_ids, 
         do_sample=do_sample, 
         max_length=150, 
-        top_p=0.90
+        top_p=0.90,
+        num_return_sequences=3
     )
+    # TODO: Add an option for multiple predictions.
+    recipes = tokenizer.batch_decode(output)
+    logging.info(f"RECIPES: {recipes}")
+
     recipe = tokenizer.batch_decode(output)[0]
     # Get the generated recipe - it is up until the 1st [SEP] tag.
     try:
