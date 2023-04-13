@@ -6,9 +6,9 @@ This is GPT-2 trained on a custom dataset of recipes in `Bulgarian`. You can fin
 
 ## Website
 <p align="center">
-    <a href="https://auhide-chef-gpt-app-l4p7k3.streamlit.app/" target="_blank">
+    <a href="https://chef-gpt.streamlit.app/" target="_blank">
         <img src="./static/website.jpg"></center>
     </a>
 </p>
 
-You can visit the website by clicking [here](https://auhide-chef-gpt-app-l4p7k3.streamlit.app/).
+You can visit the website by clicking [here](https://chef-gpt.streamlit.app/).
