@@ -12,6 +12,16 @@ st.set_page_config(
 )
 
 
+# Hiding the default Streamlit hamburger and text.
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
+
 # When there has already been a defined logger in the environment.
 if len(logging.getLogger().handlers) > 0:
     logging.getLogger().setLevel(logging.INFO)
@@ -74,6 +84,7 @@ with st.spinner("Готвачът опреснява знанията си..."):
 
 
 st.markdown("<h1 style='text-align: center; color: grey;'>Изкуствен Готвач</h1>", unsafe_allow_html=True)
+st.caption("Моля, въвеждайте конкретните количества на продуктите. Например, вместо 'брашно' - '1 ч.ч. брашно' или '250 гр брашно'. Все пак Готвачът иска да Ви предложи перфектните рецепти!")
 
 
 if "ingredients" not in st.session_state:
