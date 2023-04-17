@@ -1,5 +1,5 @@
 # Chef GPT
-GPT-2 architecture trained to generate recipes based on ingredients.
+GPT-2 architecture trained to generate recipes based on either ingredients or recipe name.
 
 ## Model description
 This is GPT-2 trained on a custom dataset of recipes in `Bulgarian`. You can find the dataset [here](https://www.kaggle.com/datasets/auhide/bulgarian-recipes-dataset).
