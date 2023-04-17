@@ -2,7 +2,7 @@
   "version": "1.0",
   "truncation": {
     "direction": "Right",
-    "max_length": 128,
+    "max_length": 256,
     "strategy": "LongestFirst",
     "stride": 0
   },
@@ -41,8 +41,8 @@
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": true,
+      "special": false
     },
     {
       "id": 30003,
@@ -50,12 +50,21 @@
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": true,
+      "special": false
     },
     {
       "id": 30004,
       "content": "[EOL]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": true,
+      "special": false
+    },
+    {
+      "id": 30005,
+      "content": "[TTL]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,

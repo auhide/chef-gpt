@@ -1,8 +1,6 @@
 {
   "additional_special_tokens": [
-    "[ING]",
-    "[REC]",
-    "[EOL]"
+    "[TTL]"
   ],
   "bos_token": "<|endoftext|>",
   "eos_token": "[SEP]",

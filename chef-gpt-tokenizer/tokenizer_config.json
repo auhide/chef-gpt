@@ -3,7 +3,7 @@
   "bos_token": "<|endoftext|>",
   "eos_token": "<|endoftext|>",
   "model_max_length": 1024,
-  "name_or_path": "auhide/chef-gpt-base",
+  "name_or_path": "auhide/chef-gpt",
   "special_tokens_map_file": null,
   "tokenizer_class": "GPT2Tokenizer",
   "unk_token": "<|endoftext|>"

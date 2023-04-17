@@ -1,2 +1,2 @@
-MODEL_ID = "auhide/chef-gpt-base"
+MODEL_ID = "auhide/chef-gpt"
 TOKENIZER_PATH = "./chef-gpt-tokenizer"
