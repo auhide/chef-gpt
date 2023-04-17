@@ -3,7 +3,7 @@ GPT-2 architecture trained to generate recipes based on ingredients.
 
 ## Model description
 This is GPT-2 trained on a custom dataset of recipes in `Bulgarian`. You can find the dataset [here](https://www.kaggle.com/datasets/auhide/bulgarian-recipes-dataset).
-The model is published on HuggingFace's Model Hub with ID [`auhide/chef-gpt-base`](https://huggingface.co/auhide/chef-gpt-base).
+The model is published on HuggingFace's Model Hub with ID [`auhide/chef-gpt`](https://huggingface.co/auhide/chef-gpt).
 
 ## Website
 <p align="center">
