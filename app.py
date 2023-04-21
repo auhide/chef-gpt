@@ -95,17 +95,16 @@ with st.expander("Създай рецепта от съставки"):
 
 with st.expander("Създай рецепта от име"):
     title = st.text_input('', placeholder="Въведи име на рецептата")
-    print("Title:", title)
 
     based_on_title_widget(
         st, 
-        title=title.capitalize(), 
+        title=title, 
         tokenizer=tokenizer, model=chef_gpt
     )
 
     if title:
         st.markdown("<h3 style='text-align: center; color: grey;'>Рецепта</h3>", unsafe_allow_html=True)
-        st.markdown(f"<h4 style='text-align: center; color: grey;'>{title.capitalize()}</h4>", unsafe_allow_html=True)
+        st.markdown(f"<h4 style='text-align: center; color: grey;'>{title}</h4>", unsafe_allow_html=True)
         
         if st.session_state.full_recipe:
             st.markdown(st.session_state.full_recipe)

@@ -19,16 +19,17 @@ def _generate_recipe(
         do_sample=do_sample, 
         max_length=150, 
         top_p=0.95,
-        num_beams=3
     )
 
     recipe = tokenizer.batch_decode(output)[0]
     # Get the generated recipe - it is up until the 1st [SEP] tag.
     try:
-        recipe = re.findall(r"\[REC\](.+?)\[SEP\]", recipe)[0]
+        recipe = re.findall(r"(\[REC\].+$)", recipe)[-1]
+        recipe = re.findall(r"\[REC\](.+?)\[SEP\]", recipe)[-1]
     except IndexError:
         # When the generated recipe is not finished - return the generated one
         # up until the last symbol.
+        recipe = re.sub(f"\[\w+\]", "", recipe)
         pass
 
     return recipe
@@ -48,7 +49,7 @@ def _generate_full_recipe(
         input_ids, 
         do_sample=do_sample, 
         max_length=200, 
-        top_p=0.95,
+        top_p=0.90,
         num_beams=3
     )
 
