@@ -27,10 +27,9 @@ def _generate_recipe(
         recipe = re.findall(r"(\[REC\].+$)", recipe)[-1]
         recipe = re.findall(r"\[REC\](.+?)\[SEP\]", recipe)[-1]
     except IndexError:
-        # When the generated recipe is not finished - return the generated one
-        # up until the last symbol.
-        recipe = re.sub(f"\[\w+\]", "", recipe)
         pass
+
+    recipe = re.sub(f"\[\w+\]", "", recipe)
 
     return recipe
 
@@ -89,6 +88,11 @@ def based_on_ingredients_widget(st, ingredient, tokenizer, model):
         if st.session_state.ingredients:
             with st.spinner("Готвачът измисля рецепта, бъдете търпеливи..."):
                 logging.info("Generating recipe...")
+                # Lowercasing the ingredients.
+                st.session_state.ingredients = [
+                    ing.lower() 
+                    for ing in st.session_state.ingredients
+                ]
                 curr_ingredients = f"[ING]{'[EOL]'.join(st.session_state.ingredients)}[REC]"
                 st.session_state.recipe = _generate_recipe(
                     curr_ingredients, 
