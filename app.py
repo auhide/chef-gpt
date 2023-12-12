@@ -13,7 +13,7 @@ from widgets import based_on_ingredients_widget, based_on_title_widget
 
 
 st.set_page_config(
-    page_title="🤖 Изкуствен Готвач",
+    page_title="🤖 Artificial Chef",
 )
 
 
